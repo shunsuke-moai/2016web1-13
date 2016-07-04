@@ -73,11 +73,11 @@ var update=function(){
  refresh();
 }
 
-update();
-
 var refresh=function(){
   setTimeout(update,1000);
 }
+
+update();
 
 var last_date=getCookie('lastDate');
 if(last_date){
