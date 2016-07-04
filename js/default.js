@@ -33,6 +33,10 @@ function getCookie(c_name){
   return "";
 }
 
+document.getElementById('form').select.onchange=function(){
+  location.href=document.getElementById('form').select.value;
+}
+
 function getFileName(){
   return window.location.href.split('/').pop();
 }
@@ -73,10 +77,6 @@ var refresh=function(){
   setTimeout(update,1000);
 }
 update();
-
-document.getElementById('form').select.onchange=function(){
-  location.href=document.getElementById('form').select.value;
-}
 
 var last_date=getCookie('lastDate');
 if(last_date){
