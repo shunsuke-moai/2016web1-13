@@ -51,6 +51,9 @@ else{
 }
 opt.selected=true;
 
+var refresh=function(){
+  setTimeout(update,1000);
+}
 var separate_time=function(time){
   var sec=Math.floor((time/1000)%60);
   var min=Math.floor((time/1000/60)%60);
@@ -73,9 +76,6 @@ var update=function(){
  refresh();
 }
 
-var refresh=function(){
-  setTimeout(update,1000);
-}
 update();
 
 var last_date=getCookie('lastDate');
